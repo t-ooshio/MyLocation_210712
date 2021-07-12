@@ -200,7 +200,7 @@ public class IareaService extends Service implements LocationListener {
 
         //ログファイルの生成
         locationLog = new LocationLog(this);
-        locationLog.makeLogFile(settingHeader);
+        locationLog.makeLogFile("location",settingHeader);
         locationLog.writeLog(
                 locationType + "," + settingCount + "," + settingTimeout
                         + "," + settingInterval + "," + settingSuplEndWaitTime + ","

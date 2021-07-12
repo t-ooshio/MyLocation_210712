@@ -33,6 +33,7 @@ public class SettingActivity extends AppCompatActivity {
     private RadioButton radioButtonNetwork;
     private RadioButton radioButtonFlp;
     private RadioButton radioButtoniArea;
+    private CheckBox checkBoxisGetSatelliteLog;
     private CheckBox checkBoxisCold;
 
     @Override
@@ -57,6 +58,7 @@ public class SettingActivity extends AppCompatActivity {
         radioButtonNetwork = (RadioButton)findViewById(R.id.rbNw);
         radioButtoniArea = (RadioButton)findViewById(R.id.rbiArea);
         radioButtonFlp = (RadioButton)findViewById(R.id.rbFlp);
+        checkBoxisGetSatelliteLog = (CheckBox)findViewById(R.id.checkboxIsGetSatelliteLog);
         checkBoxisCold = (CheckBox)findViewById(R.id.checkboxIsCold);
     }
 
@@ -113,6 +115,12 @@ public class SettingActivity extends AppCompatActivity {
     }
     public void enableRadioButtoniArea(){
         radioButtoniArea.setChecked(true);
+    }
+    public void enableIsGetSatelliteLog(){
+        checkBoxisGetSatelliteLog.setChecked(true);
+    }
+    public void disableIsGetSateliteLog(){
+        checkBoxisGetSatelliteLog.setChecked(false);
     }
     public void enableIsCold(){
         checkBoxisCold.setChecked(true);
@@ -171,6 +179,9 @@ public class SettingActivity extends AppCompatActivity {
     }
     public boolean isRadioButtoniArea(){
         return radioButtoniArea.isChecked();
+    }
+    public boolean isGetSatelliteLog(){
+        return checkBoxisGetSatelliteLog.isChecked();
     }
     public boolean isColdCheck(){
         return checkBoxisCold.isChecked();

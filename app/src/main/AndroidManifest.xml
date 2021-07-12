@@ -33,6 +33,7 @@
         <service android:name=".Service.NetworkService"></service>
         <service android:name=".Service.IareaService"></service>
         <service android:name=".Service.FlpService"></service>
+        <service android:name=".Service.GetSatellite"></service>
 
     </application>
 

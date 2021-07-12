@@ -49,6 +49,9 @@ public class SettingUsecase {
     public void setDelAssistDataTime(int delAssistDataTime){
         settingPref.setDelAssistDataTime(delAssistDataTime);
     }
+    public void setIsGetSatelliteLog(boolean isGetSatelliteLog){
+        settingPref.setIsGetSatelliteLog(isGetSatelliteLog);
+    }
     public void setIsCold(boolean iscold){
         settingPref.setIsCold(iscold);
     }
@@ -73,7 +76,9 @@ public class SettingUsecase {
     public long getminTime(){
         return settingPref.getminTime();
     }
-
+    public boolean getIsGetSatelliteLog(){
+        return settingPref.getIsGetSatelliteLog();
+    }
     public boolean getIsCold(){
         return settingPref.getIsCold();
     }

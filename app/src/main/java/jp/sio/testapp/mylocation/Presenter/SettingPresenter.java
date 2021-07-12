@@ -49,6 +49,7 @@ public class SettingPresenter {
         settingusecase.setInterval(activity.getInterval());
         settingusecase.setTimeout(activity.getTimeout());
         settingusecase.setminTime(activity.getminTime());
+        settingusecase.setIsGetSatelliteLog(activity.isGetSatelliteLog());
         settingusecase.setIsCold(activity.isColdCheck());
         settingusecase.setDelAssistDataTime(activity.getDelAssistDataTime());
         settingusecase.setSuplEndWaitTIme(activity.getSuplEndWaitTime());
@@ -77,6 +78,11 @@ public class SettingPresenter {
         activity.setInterval(settingusecase.getInterval());
         activity.setTimeout(settingusecase.getTimeout());
         activity.setminTime(settingusecase.getminTime());
+        if(settingusecase.getIsGetSatelliteLog()) {
+            activity.enableIsGetSatelliteLog();
+        }else {
+            activity.disableIsGetSateliteLog();
+        }
         if(settingusecase.getIsCold()) {
             activity.enableIsCold();
         }else {

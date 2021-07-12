@@ -23,6 +23,7 @@ public class SettingPref {
     private final long defTimeout = 60;
     private final long defminTime = 0;
     private final boolean defIsCold = true;
+    private final boolean defIsGetSatelliteLog = true;
     private final int defSuplEndWaitTime = 0;
     private final int defDelAssistDataTime = 3;
     private final String defLocationType = "UEB";
@@ -62,6 +63,11 @@ public class SettingPref {
         editor.putLong(context.getString(R.string.settingTimeout),timeout);
         commitSetting();
     }
+    public void setIsGetSatelliteLog(boolean isGetSatelliteLog){
+        editor.putBoolean(context.getString(R.string.settingIsGetSatelliteLog),isGetSatelliteLog);
+        commitSetting();
+    }
+
     public void setIsCold(boolean isCold){
         editor.putBoolean(context.getString(R.string.settingIsCold),isCold);
         commitSetting();
@@ -91,6 +97,10 @@ public class SettingPref {
     public long getTimeout(){
         return settingPref.getLong(context.getString(R.string.settingTimeout),defTimeout);
     }
+    public boolean getIsGetSatelliteLog(){
+        return settingPref.getBoolean(context.getString(R.string.settingIsGetSatelliteLog),defIsGetSatelliteLog);
+    }
+
     public boolean getIsCold(){
         return settingPref.getBoolean(context.getString(R.string.settingIsCold),defIsCold);
     }
@@ -107,6 +117,7 @@ public class SettingPref {
         setInterval(defInterval);
         setminTime(defminTime);
         setTimeout(defTimeout);
+        setIsGetSatelliteLog(defIsGetSatelliteLog);
         setIsCold(defIsCold);
         setSuplEndWaitTime(defSuplEndWaitTime);
         setDelAssistDataTime(defDelAssistDataTime);

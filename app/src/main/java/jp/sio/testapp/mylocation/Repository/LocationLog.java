@@ -47,9 +47,9 @@ public class LocationLog {
     /**
      * Logファイルを作成
      */
-    public void makeLogFile(String settingHeader){
+    public void makeLogFile(String filename,String settingHeader){
         createLogTime = System.currentTimeMillis();
-        fileName = simpleDateFormat.format(createLogTime) + ".txt";
+        fileName = filename + "_" + simpleDateFormat.format(createLogTime) + ".txt";
         if(isExternalStrageWriteable()){
             L.d("ExternalStrage書き込みOK");
             //dirPath = Environment.getExternalStorageDirectory().getPath() + "/MyLocation/";
